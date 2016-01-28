@@ -1,0 +1,23 @@
+﻿.vertical-center {
+    min-height:100%;
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+input{
+   text-align:center;
+}
+
+    .vertical-center .form-control {
+    max-width:300px;
+    margin:5px;
+    }
+
+.big-text {
+    font-size: 15rem;
+}
+
