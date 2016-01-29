@@ -1,0 +1,25 @@
+﻿<!--<div class="search">
+    <div class="{{ !search ? 'no-' : ''}}fill search-box">
+        <input ng-model="search" ng-model-options= "{ debounce: 300}" placeholder="Start Here" class="form-control" ng-change="controller.updateStocks(search)"/>
+    </div>
+    <div class="{{ !search ? 'no-' : ''}}fill">
+        <ul>
+            <li ng-repeat="stock in controller.stocks">
+                {{stock.ticker}} {{stock.name}} {{stock.price}} {{stock.price - stock.openPrice}}
+            </li>
+        </ul>
+    </div>
+</div>-->
+
+<div class="search">
+    <div class="{{search ? 'no-' : ''}}fill search-box">
+        <input ng-model="search" ng-model-options="{debounce: 300}" placeholder="Start here" class="form-control" ng-change="controller.updateStocks(search)" />
+    </div>
+    <div class="{{ !search ? 'no-' : ''}}fill">
+        <ul class="stocksList">
+            <li ng-repeat="stock in controller.stocks">
+                {{stock.ticker}} {{stock.name}} {{stock.price}} {{stock.price - stock.openPrice}}
+            </li>
+        </ul>
+    </div>
+</div>

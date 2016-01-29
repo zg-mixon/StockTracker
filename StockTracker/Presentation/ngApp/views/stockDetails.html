@@ -1,0 +1,50 @@
+﻿<div class="fixed">
+    <header class="row">
+        <div class="col-md-1"><strong>{{controller.stock.ticker}}</strong></div>
+        <div class="col-md-1">{{controller.stock.name}}</div>
+        <div class="col-md-1">{{controller.stock.price | currency}}</div>
+        <div class="col-md-1">{{controller.stock.price - controller.stock.openPrice}}</div>
+    </header>
+    <div class="row">
+        <div class="col-md-offset-9 col-md-3">
+            <div class="col-md-6">
+                <input ng-model="quantity" placeholder="Quantity" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <div class="btn btn-success" ng-click="controller.buy(quantity)">Buy</div>
+                <div class="btn btn-danger" ng-click="controller.sell(quantity)">Sell</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table table-striped">
+
+
+    <tr>
+        <td>Open Price</td>
+        <td>{{controller.stock.openPrice | currency}}</td>
+        <td>High</td>
+        <td>{{controller.stock.highPrice | currency}}</td>
+        <td>Low</td>
+        <td>{{controller.stock.lowPrice | currency}}</td>
+
+    </tr>
+    <tr>
+        <td>Description</td>
+        <td colspan="5">{{controller.stock.description}}</td>
+    </tr>
+</table>
+
+<div class="row">
+    <h3>Transactions</h3>
+    <table class="table table-striped">
+        <tr ng-repeat="transaction in controller.stock.transactions">
+            <td>{{transaction.dateCreated}}</td>
+            <td>{{transaction.quantity}}</td>
+            <td>{{transaction.price}}</td>
+            <td>{{transaction.quantity * transaction.price | currency}}</td>
+        </tr>
+    </table>
+</div>
+

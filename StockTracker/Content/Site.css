@@ -1,23 +1,73 @@
-﻿.vertical-center {
-    min-height:100%;
-    min-height:100vh;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+﻿body.container-fluid {
+    padding: 3%;
 }
 
-input{
-   text-align:center;
+.vertical-center {
+    min-height: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vertical-center .form-control {
+    max-width: 300px;
+    margin: 5px 0;
+}
+form {
+    margin-bottom:0;
 }
 
-    .vertical-center .form-control {
-    max-width:300px;
-    margin:5px;
-    }
+.search {
+    min-height: 100%;
+    min-height: 100vh;
 
-.big-text {
-    font-size: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+}
+.search .form-control {
+    max-width: 500px;
 }
 
+.search div {
+    transition: flex .75s cubic-bezier(.4,0,.7,1),
+                background .75s cubic-bezier(.4,0,.7,1);
+    width: 100%;
+    padding: 14px;
+}
+.search div:first-child {
+    background-color: #D9DDBE !important;
+}
+.search div:last-child {
+    background-color: #D9DDBE;
+}
+.search input {
+    min-height: 44px;
+}
+.search .search-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.search ul {
+}
+.fill {
+    flex: 10;
+    background-color: rgb(255,255,255) !important;
+}
+.no-fill {
+    flex: 1;
+}
+ 
+.stocksList {
+    text-align:center;
+}
+
+ul
+{
+    list-style-type: none;
+}

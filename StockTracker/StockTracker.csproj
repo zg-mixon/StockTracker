@@ -207,6 +207,8 @@
     <Compile Include="Domain\Transaction.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
+    <Compile Include="Infrastructure\StockRepository.cs" />
+    <Compile Include="Infrastructure\TransactionRepository.cs" />
     <Compile Include="Migrations\201601272119291_initial.cs" />
     <Compile Include="Migrations\201601272119291_initial.Designer.cs">
       <DependentUpon>201601272119291_initial.cs</DependentUpon>
@@ -215,17 +217,26 @@
     <Compile Include="Migrations\201601272124288_added app-db context idbsets.Designer.cs">
       <DependentUpon>201601272124288_added app-db context idbsets.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601281648198_fixed some missing things and made a DTO.cs" />
+    <Compile Include="Migrations\201601281648198_fixed some missing things and made a DTO.Designer.cs">
+      <DependentUpon>201601281648198_fixed some missing things and made a DTO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\Controllers\StocksController.cs" />
     <Compile Include="Presentation\Models\Identity\AccountBindingModels.cs" />
     <Compile Include="Presentation\Models\Identity\AccountViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domain\Identity\ApplicationOAuthProvider.cs" />
     <Compile Include="Presentation\Models\Identity\ChallengeResult.cs" />
+    <Compile Include="Services\ExpandedStockDTO.cs" />
+    <Compile Include="Services\StockDTO.cs" />
+    <Compile Include="Services\StockService.cs" />
+    <Compile Include="Services\TransactionDTO.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -247,6 +258,8 @@
     <Content Include="Presentation\ngApp\.gitignore" />
     <Content Include="Presentation\ngApp\views\login.html" />
     <Content Include="Presentation\ngApp\views\registration.html" />
+    <Content Include="Presentation\ngApp\views\research.html" />
+    <Content Include="Presentation\ngApp\views\stockDetails.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
@@ -293,6 +306,9 @@
     <EmbeddedResource Include="Migrations\201601272124288_added app-db context idbsets.resx">
       <DependentUpon>201601272124288_added app-db context idbsets.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601281648198_fixed some missing things and made a DTO.resx">
+      <DependentUpon>201601281648198_fixed some missing things and made a DTO.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -302,6 +318,8 @@
   <ItemGroup>
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\authController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\researchController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\stockDetailsController.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />

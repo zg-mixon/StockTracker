@@ -35,7 +35,7 @@
 
             $routeProvider.when('/', { template: "Hello World" })
 
-                       
+
             $routeProvider.when('/login', {
                 templateUrl: 'Presentation/ngApp/views/login.html',
                 controller: StockTracker.Controllers.AuthController,
@@ -44,6 +44,16 @@
             $routeProvider.when('/register', {
                 templateUrl: 'Presentation/ngApp/views/registration.html',
                 controller: StockTracker.Controllers.AuthController,
+                controllerAs: 'controller'
+            })
+            $routeProvider.when('/research', {
+                templateUrl: 'Presentation/ngApp/views/research.html',
+                controller: StockTracker.Controllers.ResearchController,
+                controllerAs: 'controller'
+            })
+            $routeProvider.when('/ticker/:ticker', {
+                templateUrl: '/Presentation/ngApp/views/stockDetails.html',
+                controller: StockTracker.Controllers.StockDetailsController,
                 controllerAs: 'controller'
             });
         });
